@@ -4,6 +4,10 @@ from keras.layers import Dense, LeakyReLU, concatenate
 
 
 def build_generator(network):
+    
+    #正規分布に従って重みを初期化します(按照正态分布生成随机张量的初始化器)
+    #keras.initializers.RandomNormal(mean=0.0, stddev=0.05, seed=None
+    
     seed = network.seed
     random_normal = keras.initializers.RandomNormal(seed=seed)
 
